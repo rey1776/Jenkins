@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Building backend'){
             steps{
-                sh "cd demo && mvn clean install && ls reynaldo/"
+                sh "cd demo && mvn clean install && ls target/"
             }
         }
     }
