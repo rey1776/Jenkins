@@ -8,7 +8,7 @@ pipeline {
                 sh "cd frontend && npm install && npm run build"
             }
         }
-        STAGE('Deploy Frontend'){
+        stage('Deploy Frontend'){
             steps {
                 script{ 
                     try{
