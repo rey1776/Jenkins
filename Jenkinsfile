@@ -5,18 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 sh "echo Building frontend"
-                sh "cd frontend && npm install && npm run dev"
+                sh "cd frontend && npm install && npm run build"
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing started...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying now!'
-            }
-        }
+        
     }
 }
