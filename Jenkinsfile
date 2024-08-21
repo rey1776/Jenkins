@@ -27,6 +27,5 @@ pipeline {
                 sh "cd demo && mvn clean install && ls target/"
             }
         }
-        ll
     }
 }
