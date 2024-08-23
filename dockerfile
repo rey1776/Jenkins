@@ -17,11 +17,11 @@ RUN ./aws/install
 RUN jenkins-plugin-cli --plugins "maven-plugin workflow-aggregator git sonar nodejs kubernetes aws-credentials docker-workflow ssh-agent email-ext blueocean pipeline-aws docker-plugin"
 
 
- #docker run --name jenkins --restart=on-failure --detach `
-  # --network jenkins `
-  # --volume /var/run/docker.sock:/var/run/docker.sock `
-  # --volume jenkins-data:/var/jenkins_home `
-  # --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean
+ docker run --name jenkins --restart=on-failure --detach `
+   --network jenkins `
+   --volume /var/run/docker.sock:/var/run/docker.sock `
+   --volume jenkins-data:/var/jenkins_home `
+   --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean
 
   #username admin
   #password 30389bb4958c46e8b65ed8812e63e9a6

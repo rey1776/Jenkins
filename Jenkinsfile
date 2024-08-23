@@ -32,7 +32,5 @@ pipeline {
                 sh "cd demo && mvn test"
             }
         }
-
-
     }
 }
